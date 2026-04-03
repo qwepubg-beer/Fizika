@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media;
 
 namespace Fizika
@@ -23,13 +24,20 @@ namespace Fizika
         public static bool fields(string a, string b,string c) 
         {
             double l, w, h;
-            if(double.TryParse(a,out l)&& double.TryParse(b, out w) && double.TryParse(b, out h))
+            if(double.TryParse(a,out l))
             {
-                return true;
+                if(double.TryParse(b, out w))
+                {
+                    if(double.TryParse(c, out h)) 
+                    { return true; }
+                    else 
+                    {  return false; }
+                }
+                else { return false; }
             }
             else
             {
-                return false;
+          return false;
             }
         }
         /// <summary>
@@ -44,7 +52,12 @@ namespace Fizika
         {
             if(fields(a, b, c))
             {
-                return Convert.ToDouble(a) * Convert.ToDouble(b) * Convert.ToDouble(c) * p;
+               var answ= Convert.ToDouble(a) * Convert.ToDouble(b) * Convert.ToDouble(c) * p;
+                if (answ>0)
+                {
+                    return answ;
+                }
+                else { return 0; }
             }
             else
             {

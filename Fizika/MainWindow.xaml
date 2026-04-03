@@ -25,17 +25,17 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
-            <StackPanel Grid.Row="0">
+            <StackPanel Grid.Row="0" Margin="0,5,0,0">
                 <TextBlock Text="Высота:" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" />
                 <TextBlock Text="Ширина:" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 <TextBlock Text="Длина:" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
-            <StackPanel Grid.Row="0" Grid.Column="2">
+            <StackPanel Grid.Row="0" Grid.Column="2"  Margin="0,5,0,0">
                 <TextBox Name="a" Text="" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25"/>
                 <TextBox Name="b" Text="" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25"/>
                 <TextBox Name="c" Text="" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25"/>
             </StackPanel>
-            <StackPanel Grid.Row="1" Height="150">
+            <StackPanel Grid.Row="1" Height="150"  Margin="0,5,0,0">
                 <TextBlock  Text="Масса изделия:" FontFamily="Segoe UI" FontSize="20"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 <TextBox Name="answer" Text="" FontFamily="Segoe UI" FontSize="20" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" Width="150" Height="25"/>
             </StackPanel>
@@ -50,15 +50,15 @@
                 <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
             <Border BorderThickness="2" CornerRadius="5" BorderBrush="Gray" >
-            <StackPanel Grid.Row="0" Grid.ColumnSpan="2" >
+                <StackPanel Grid.Row="0" Grid.ColumnSpan="2"  Margin="0,5,0,0">
                 <TextBlock  Text="Материал: " FontFamily="Segoe UI" FontSize="20"  VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 <RadioButton x:Name="tin" GroupName="Material" Content="олово" FontFamily="Segoe UI" FontSize="20" Margin="5" IsChecked="True"/>
                 <RadioButton Name="lead" GroupName="Material" Content="свинец" FontFamily="Segoe UI" FontSize="20" Margin="5" />
                 <RadioButton Name="iron" GroupName="Material" Content="сталь" FontFamily="Segoe UI" FontSize="20" Margin="5"/>
                 <RadioButton Name="ice" GroupName="Material" Content="лёд" FontFamily="Segoe UI" FontSize="20" Margin="5"/>
-            </StackPanel>
+                </StackPanel>
             </Border>
-            <StackPanel Grid.Row="2" Grid.Column="0" Height="150">
+            <StackPanel Grid.Row="2" Grid.Column="0" Height="150"  Margin="0,0,0,0">
                 <Button Height="40" Width="150" Content="Вычислить" Margin="20" VerticalAlignment="Center" HorizontalAlignment="Center" FontFamily="Segoe UI" FontSize="20" Click="Button_Click" ></Button>
             </StackPanel>
         </Grid>
