@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
+using static Fizika.Function;
 namespace Fizika
 {
     /// <summary>
@@ -23,6 +23,26 @@ namespace Fizika
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if (tin.IsChecked == true) 
+            {
+                answer.Text = $"{Convert.ToString(Massa(a.Text,b.Text,c.Text,Tin))}";
+            }
+            else if(lead.IsChecked == true)
+            {
+                answer.Text = $"{Convert.ToString(Massa(a.Text, b.Text, c.Text,Lead))}";
+            }
+            else if (iron.IsChecked == true)
+            {
+                answer.Text = $"{Convert.ToString(Massa(a.Text, b.Text, c.Text, Iron))}";
+            }
+            else if (ice.IsChecked == true)
+            {
+                answer.Text = $"{Convert.ToString(Massa(a.Text, b.Text, c.Text, Ice))}";
+            }
         }
     }
 }
